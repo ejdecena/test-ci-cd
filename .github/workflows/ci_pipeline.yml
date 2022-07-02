@@ -1,0 +1,25 @@
+name: Continous Integration
+on:
+  push:
+    branches:
+      - "master"
+jobs:
+  pipeline_ci:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Cloning repository...
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Installing requirements...
+        run: pip install -r requirements.txt
+
+      - name: Runing flak8 linter...
+        run: python3 -m flake8 --config=flake8
+
+      - name: Runing tests...
+        run: python3 -m unittest -v tests/*.py
+
+      - name: Building image...
+        run: echo "Building image..."

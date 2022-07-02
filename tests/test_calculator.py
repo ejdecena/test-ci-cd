@@ -1,11 +1,12 @@
-import unittest
+from unittest import TestCase
 from calculator.calculator import Calculator
 
 
-class TestCalculator(unittest.TestCase):
+class TestCalculator(TestCase):
 
-    def setUp(self):
-        self.calculator = Calculator()
+    @classmethod
+    def setUpClass(cls):
+        cls.calculator = Calculator()
 
     def test_sumar(self):
         self.assertEqual(self.calculator.sumar(3, 2), 5)
