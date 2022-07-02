@@ -5,18 +5,23 @@ Test continuos integration and deploying integration.
 ## Development.
 Instructions for coding.
 
-#### Docker.
-adsad
+#### Build a Docker image:
+```bash
+docker build -t "<your tags>" .
+```
 
-#### Lint.
+#### Run the linter:
 ```bash
 flake8 --config=flake8
 ```
 
-#### Tests.
+#### Run the tests:
 ```bash
 python3 -m unittest -v tests/*.py
 ```
+
+#### Run the calculator in a Docker container:
+adsad
 
 ## Production.
 Instructions for production.
