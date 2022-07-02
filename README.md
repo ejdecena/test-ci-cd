@@ -1,4 +1,4 @@
-[![Continous Integration.](https://github.com/ejdecena/test-ci-cd/actions/workflows/ci_pipeline.yml/badge.svg?branch=master&event=push)](https://github.com/ejdecena/test-ci-cd/actions/workflows/ci_pipeline.yml)
+[![Continous Integration.](https://github.com/ejdecena/test-ci-cd/actions/workflows/ci_pipeline.yml/badge.svg?branch=master&event=push)](https://github.com/ejdecena/test-ci-cd/actions/workflows/continuos_integration.yml)
 # test-ci-cd
 Test continuos integration and deploying integration.
 
