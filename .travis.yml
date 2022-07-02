@@ -1,0 +1,6 @@
+language: python
+python:
+  - "3.6"
+script:
+  - python -m flake8 --config=flake8
+  - python -m unittest -v tests/*.py
