@@ -1,0 +1,20 @@
+# This workflow will build docker image and deploy it to Docker Hub.
+name: Build and Deploy.
+on:
+  push:
+    branches: ["master"]
+
+jobs:
+  Build_and_Deploy:
+    if: github.event_name == "pull_request" && github.event.action == 'closed' && github.event.pull_request.merged == true
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cloning Calculator repository...
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Hello.
+        run: echo "Hello world!"
