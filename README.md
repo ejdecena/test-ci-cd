@@ -8,7 +8,7 @@ adsad
 
 ### Lint.
 ```bash
-python3 -m flake8 --config=flake8
+flake8 --config=flake8
 ```
 
 ### Tests.

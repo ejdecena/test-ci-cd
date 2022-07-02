@@ -1,8 +1,8 @@
-from unittest import TestCase
+import unittest
 from calculator.calculator import Calculator
 
 
-class TestCalculator(TestCase):
+class TestCalculator(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
@@ -13,3 +13,7 @@ class TestCalculator(TestCase):
 
     def test_multiplicar(self):
         self.assertEqual(self.calculator.multiplicar(3, 4), 12)
+
+
+if __name__ == "__main__":
+    unittest.main()
