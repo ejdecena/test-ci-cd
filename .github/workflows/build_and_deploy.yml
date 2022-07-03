@@ -29,5 +29,6 @@ jobs:
       - name: Build and push to DockerHub...
         uses: docker/build-push-action@v3
         with:
+          context: .
           push: true
-          tags: ${{ github.sha }}
+          tags: ejdecena/${{ github.sha }}
