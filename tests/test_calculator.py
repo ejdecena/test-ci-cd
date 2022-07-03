@@ -1,5 +1,6 @@
+#!/usr/bin/env python3
 import unittest
-from calculator.calculator import Calculator
+from calculator import Calculator
 
 
 class TestCalculator(unittest.TestCase):
@@ -13,7 +14,3 @@ class TestCalculator(unittest.TestCase):
 
     def test_multiplicar(self):
         self.assertEqual(self.calculator.multiplicar(3, 4), 12)
-
-
-if __name__ == "__main__":
-    unittest.main()
