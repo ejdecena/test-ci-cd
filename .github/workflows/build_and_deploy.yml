@@ -6,9 +6,7 @@ on:
 
 jobs:
   Build_and_Deploy:
-    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
-
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Cloning Calculator repository...
@@ -16,5 +14,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Hello.
-        run: echo "Hello world!"
+      - name: Build and push to DockerHub...
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: ${{ github.repository }}
+          tag_with_ref: true
+          tag_with_sha: true
+          tags: ${{ github.sha }}

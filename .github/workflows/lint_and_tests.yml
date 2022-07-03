@@ -7,7 +7,7 @@ on:
 
 jobs:
   Lint_and_Tests:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Setting Python version 3.8...
         uses: actions/setup-python@v3
